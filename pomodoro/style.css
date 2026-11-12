@@ -1,0 +1,252 @@
+
+
+:root {
+    --cream: #f8f3e9;
+    --card: #fffdf8;
+    --brown: #6f4e37;
+    --dark-brown: #3f2b20;
+    --light-brown: #e8d9c5;
+    --text: #49382d;
+    --muted: #8b7b6d;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 25px 18px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h2 {
+    color: var(--brown);
+    font-size: 25px;
+    margin-bottom: 7px;
+}
+
+header p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.container {
+    width: 100%;
+    max-width: 850px;
+    margin: auto;
+}
+
+.timer-card,
+.panel {
+    background: var(--card);
+    border: 1px solid var(--light-brown);
+    border-radius: 18px;
+    padding: 28px;
+}
+
+.timer-card {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.timer-card h1 {
+    font-size: 26px;
+    color: var(--dark-brown);
+}
+
+#timer {
+    font-size: clamp(55px, 10vw, 76px);
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: var(--brown);
+    font-variant-numeric: tabular-nums;
+}
+
+#message {
+    color: var(--muted);
+    margin: 8px 0 20px;
+}
+
+.break-options {
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.break-options label {
+    margin-right: 8px;
+}
+
+select,
+input {
+    font: inherit;
+    color: var(--text);
+    background: var(--card);
+    border: 1px solid var(--light-brown);
+    border-radius: 8px;
+    padding: 10px;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+    border: none;
+    border-radius: 9px;
+    padding: 11px 20px;
+    background: var(--brown);
+    color: white;
+    transition: opacity 0.2s;
+}
+
+button:hover {
+    opacity: 0.82;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 2px solid var(--brown);
+    outline-offset: 3px;
+}
+
+.secondary {
+    background: var(--light-brown);
+    color: var(--dark-brown);
+}
+
+.timer-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.bottom-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.panel h2 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+#taskForm {
+    display: flex;
+    gap: 8px;
+}
+
+#taskInput {
+    min-width: 0;
+    width: 100%;
+}
+
+#addBtn {
+    font-size: 22px;
+    padding: 5px 16px;
+}
+
+#taskList {
+    list-style: none;
+    margin-top: 18px;
+}
+
+#taskList li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--light-brown);
+    overflow-wrap: anywhere;
+}
+
+#taskList li span {
+    flex: 1;
+}
+
+#taskList li.done span {
+    text-decoration: line-through;
+    color: var(--muted);
+}
+
+#taskList input[type="checkbox"] {
+    accent-color: var(--brown);
+    flex-shrink: 0;
+}
+
+.delete-btn {
+    background: transparent;
+    color: var(--muted);
+    padding: 4px 8px;
+    font-size: 18px;
+}
+
+.task-count {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 16px;
+}
+
+.stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--light-brown);
+    font-size: 14px;
+}
+
+.stat strong {
+    color: var(--brown);
+}
+
+.progress-track {
+    height: 9px;
+    background: var(--light-brown);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 22px;
+}
+
+#progressBar {
+    height: 100%;
+    width: 0%;
+    background: var(--brown);
+    transition: width 0.3s;
+}
+
+#progressText {
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 12px;
+    padding: 30px 0 10px;
+}
+
+@media (max-width: 600px) {
+    .bottom-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .timer-card,
+    .panel {
+        padding: 22px 18px;
+    }
+}

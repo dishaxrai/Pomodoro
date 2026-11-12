@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h2>Pomodoro</h2>
+        <p>Structure your time</p>
+    </header>
+
+    <main class="container">
+
+        <section class="timer-card">
+            <h1 id="mode">Focus Session</h1>
+
+            <div id="timer">25:00</div>
+
+            <p id="message">One thing at a time.</p>
+
+            <div class="break-options">
+                <label for="breakTime">Break length:</label>
+                <select id="breakTime">
+                    <option value="5">5 minutes</option>
+                    <option value="10">10 minutes</option>
+                    <option value="15">15 minutes</option>
+                </select>
+            </div>
+
+            <div class="timer-buttons">
+                <button id="startBtn">Start</button>
+                <button id="stopBtn" class="secondary">Stop</button>
+                <button id="resetBtn" class="secondary">Reset</button>
+            </div>
+
+        </section>
+
+        <div class="bottom-grid">
+
+            <section class="panel">
+                <h2>Today's tasks</h2>
+
+                <form id="taskForm">
+                    <input
+                        type="text"
+                        id="taskInput"
+                        placeholder="..."
+                        autocomplete="off"
+                        required
+                    >
+                    <button type="submit" id="addBtn">+</button>
+                </form>
+
+                <ul id="taskList"></ul>
+
+                <p class="task-count" id="taskCount">0 tasks completed</p>
+            </section>
+
+            <section class="panel progress-panel">
+                <h2>Your progress</h2>
+                
+                <div class="stat">
+                    <span>Focus sessions</span>
+                    <strong id="sessionCount">0</strong>
+                </div>
+
+                <div class="stat">
+                    <span>Focus time</span>
+                    <strong id="focusTime">0 min</strong>
+                </div>
+
+                <div class="stat">
+                    <span>Tasks completed</span>
+                    <strong id="completedCount">0</strong>
+                </div>
+
+                <div class="progress-track">
+                    <div id="progressBar"></div>
+                </div>
+
+                <p id="progressText">Complete your first focus session!</p>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        ────୨ৎ────
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
